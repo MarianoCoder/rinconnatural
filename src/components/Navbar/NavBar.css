@@ -1,0 +1,19 @@
+.navbar{
+    background-color: darkgreen;
+    color: cornsilk;
+    list-style: none;
+    align-items: center;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;;
+    
+}
+
+.menu{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    background-color: blueviolet;
+    
+}
