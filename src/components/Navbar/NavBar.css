@@ -1,5 +1,6 @@
 .navbar{
-    background-color: darkgreen;
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     color: cornsilk;
     list-style: none;
     align-items: center;
@@ -14,6 +15,24 @@
     justify-content: space-around;
     display: flex;
     align-items: center;
-    background-color: blueviolet;
+    background-color: rgb(140, 31, 243);
     
+}
+.categorias{
+    padding: 20px;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    background-color: rgb(140, 31, 243);
+    
+}
+
+.categorias button{
+
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -10,6 +10,11 @@ function NavBar() {
         <li>Tienda</li>
         <li>Contacto</li>
       </div>
+      <div className="categorias"><button>Frutos Secos</button>
+      <button>Legumbres</button>
+      <button>Hierbas</button>
+      <button>Repostería</button></div>
+
         </div>
     )
 }
