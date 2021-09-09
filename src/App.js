@@ -2,7 +2,7 @@ import "./App.css"
 import NavBar from "./components/Navbar/NavBar";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
-import CartWidget from "./components/CartWidget/CartWigget";
+import CartWidget from "./components/CartWidget/CartWidget";
 
 
 function App() {
