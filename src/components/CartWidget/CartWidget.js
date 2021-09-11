@@ -2,8 +2,6 @@ import "./CartWidget.css";
 
 const CartWidget = (props) =>{
 
-
-
     return (
         <div className="IconoCarrito"> 
         
