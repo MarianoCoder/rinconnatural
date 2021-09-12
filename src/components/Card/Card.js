@@ -13,7 +13,7 @@ const Card = (props) =>{
             alt="imagen"/>
             <p>{props.description}</p>
             <p className="Precio">{props.precio}</p>
-            <button className="BtnComprar">{props.button}</button>
+            <button onClick={props.comprar}>Comprar</button>
         
         </div>
     );

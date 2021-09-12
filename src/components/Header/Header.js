@@ -6,6 +6,7 @@ export default class Header extends Component {
     constructor(props) {
         super(props);
         this.state ={
+            name:"Mariano"
 
            
         };
@@ -16,7 +17,7 @@ export default class Header extends Component {
         return (
             <div>
             <h1>Bienvenidos a la {this.props.name}</h1>
-            <p>{this.state.name}</p>
+            <p className="greeting">{this.state.name}</p>
             </div>
         )
     }

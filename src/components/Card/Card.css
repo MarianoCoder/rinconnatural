@@ -25,7 +25,7 @@
     font-size: 15px;
     
 }
-.Card .BtnComprar {
+button {
     color: white;
     font-weight: bolder;
     font-family:'Lucida Sans';
