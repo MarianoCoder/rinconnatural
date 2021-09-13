@@ -2,6 +2,7 @@ import "./App.css"
 import NavBar from "./components/Navbar/NavBar";
 import Header from "./components/Header/Header";
 import ItemListContainer from "./containers/ItemListContainer";
+import ItemCount from "./components/ItemCount/ItemCount";
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <Header name="Tienda" />
       <NavBar />
       <ItemListContainer />
+      <ItemCount />
     </div>
   );
 }
