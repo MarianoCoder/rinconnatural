@@ -17,7 +17,7 @@ function App() {
       <Header name="Tienda" />
       <NavBar />
       <ItemListContainer />
-      <ItemCount />
+      <ItemCount stock="5" initial="0"/>
     </div>
   );
 }
