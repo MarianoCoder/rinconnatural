@@ -1,19 +1,19 @@
 import "./Card.css";
 
 
-const Card = (props) =>{
+const Card = ({ title, description, imagen, comprar, precio }) =>{
 
 
 
     return (
         <div className="Card"> 
-        <span className="Tituloproducto">{props.title}</span>
+        <span className="Tituloproducto">{title}</span>
         <img className="Imgproducto"
-            src={props.src}
+            src={imagen}
             alt="imagen"/>
-            <p>{props.description}</p>
-            <p className="Precio">{props.precio}</p>
-            <button onClick={props.comprar}>Comprar</button>
+            <p>{description}</p>
+            <p className="Precio">{precio}</p>
+            <button onClick={comprar}>Comprar</button>
         
         </div>
     );
