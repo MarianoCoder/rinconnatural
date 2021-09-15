@@ -14,10 +14,10 @@ function App() {
   
   return (
     <div className="App">
-      <Header name="Tienda" />
+      <Header name="Tienda"/>
       <NavBar />
       <ItemListContainer />
-      <ItemCount stock="5" initial="0"/>
+      <ItemCount stock="5" initial="1"/>
     </div>
   );
 }

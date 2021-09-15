@@ -1,7 +1,8 @@
-import "./Card.css";
+import * as React from 'react';
+import "./Item.css";
 
 
-const Card = ({ title, description, imagen, comprar, precio }) =>{
+const Item = ({ title, description, imagen, comprar, price }) =>{
 
 
 
@@ -12,11 +13,10 @@ const Card = ({ title, description, imagen, comprar, precio }) =>{
             src={imagen}
             alt="imagen"/>
             <p>{description}</p>
-            <p className="Precio">{precio}</p>
+            <p className="Price">{price}</p>
             <button onClick={comprar}>Comprar</button>
         
         </div>
     );
-};
-
-export default Card;
+}
+export default Item;

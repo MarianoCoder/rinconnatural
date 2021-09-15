@@ -19,10 +19,11 @@
     height: 60%;
     
 }
-.Card .Precio {
+.Card .Price {
    
     font-family:'Lucida Sans';
     font-size: 15px;
+    
     
 }
 button {
@@ -33,5 +34,6 @@ button {
     border-radius: 0.5rem;
     background-color: black;
     cursor: pointer;
+    
     
 }

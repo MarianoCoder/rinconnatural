@@ -1,13 +1,18 @@
 import * as React from 'react';
 
-const ItemCount =({stock, initial, addOnn}) => {
-    const[counter, setCounter] = React.useState(1);
+
+function ItemCount({stock, initial, addOnn}) {
     
+    const[counter, setCounter] = React.useState(1);
     const handleClick = () => {
-        setCounter((prevState)=> prevState + 1);
+        if (counter < stock)
+        setCounter((stock)=> stock + 1);
     }
     const handleClickmenos = () => {
-        setCounter((prevState)=> prevState - 1);
+        
+        setCounter((stock)=> stock - 1);
+        if (counter === 1)
+        setCounter(counter)
     }
     return (
         <fragment>
@@ -15,10 +20,9 @@ const ItemCount =({stock, initial, addOnn}) => {
           <button onClick={handleClickmenos}>-</button> {counter} <button onClick={handleClick}>+</button> 
         </div>
         <div>
-            <button>Agregar al Carrito</button>
+            <button>Agregar al carrito</button>
         </div>
         </fragment>
-
     )
 }
 export default ItemCount
