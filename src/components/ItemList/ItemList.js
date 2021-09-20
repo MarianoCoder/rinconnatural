@@ -2,7 +2,10 @@ import * as React from 'react';
 import Item from "../Item/Item";
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 98a20a8655ea9660ebb4c2e1f04ebaf25433430a
 const ItemList = ({unNumero}) =>{
     const [items, setItems] = React.useState ([]);
     const [cargando, setCargando] = React.useState(false)

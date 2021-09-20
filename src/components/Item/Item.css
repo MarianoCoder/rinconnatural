@@ -17,18 +17,26 @@
 .Card .Imgproducto {
     width: 100%;
     height: 60%;
+<<<<<<< HEAD
     padding: 0;
+=======
+>>>>>>> 98a20a8655ea9660ebb4c2e1f04ebaf25433430a
     
 }
 .Card .Price {
    
     font-family:'Lucida Sans';
     font-size: 15px;
+<<<<<<< HEAD
     margin: 0.5rem;
 }
 .Description {
    
     margin: 0;
+=======
+    
+    
+>>>>>>> 98a20a8655ea9660ebb4c2e1f04ebaf25433430a
 }
 button {
     color: white;
