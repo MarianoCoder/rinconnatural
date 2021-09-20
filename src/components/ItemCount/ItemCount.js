@@ -15,14 +15,14 @@ function ItemCount({stock, initial, addOnn}) {
         setCounter(counter)
     }
     return (
-        <fragment>
+        <div>
         <div>
           <button onClick={handleClickmenos}>-</button> {counter} <button onClick={handleClick}>+</button> 
         </div>
         <div>
             <button>Agregar al carrito</button>
         </div>
-        </fragment>
+        </div>
     )
 }
 export default ItemCount

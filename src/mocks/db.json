@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "title": "Almendras",
+      "description": "Esta es la descripción del producto Almendras",
+      "price": 160,
+      "image": "https://larepo.com.ar/dlr/12-home_default/almendras-peladas-x-1-kg.jpg"
+    },
+    {
+      "id": 1,
+      "title": "Nueces",
+      "description": "Esta es la descripción del producto Nueces",
+      "price": 120,
+      "image": "https://larepo.com.ar/dlr/411-home_default/nuez-pelada-dorada-x-1-kg.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Avellanas",
+      "description": "Esta es la descripción del producto Avellanas",
+      "price": 10002,
+      "image": "https://larepo.com.ar/dlr/7336-home_default/avellanas-peladas-x-500-g.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Chocolate",
+      "description": "Esta es la descripción del producto Chocolate",
+      "price": 330,
+      "image": "https://larepo.com.ar/dlr/7651-home_default/chocolate-familiar-negro-para-taza-con-stevia-x-100-g-colonial.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Pasta de Mani",
+      "description": "Esta es la descripción del producto Pasta de Mani",
+      "price": 350,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVeXCWQVrgSEcR_Jzrh6qBjEedJLXJDw07w&usqp=CAU"
+    },
+    {
+      "id": 5,
+      "title": "Ghee",
+      "description": "Esta es la descripción del producto Ghee",
+      "price": 410,
+      "image": "https://neufood.com.ar/wp-content/uploads/2020/10/dona_magda_ghee1-d5c7612d1860efb58815951819464687-640-0.jpg"
+    }
+  ]
+}

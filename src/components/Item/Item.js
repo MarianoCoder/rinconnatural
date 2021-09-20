@@ -12,7 +12,7 @@ const Item = ({ title, description, imagen, comprar, price }) =>{
         <img className="Imgproducto"
             src={imagen}
             alt="imagen"/>
-            <p>{description}</p>
+            <p className="Description">{description}</p>
             <p className="Price">{price}</p>
             <button onClick={comprar}>Comprar</button>
         
