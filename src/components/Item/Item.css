@@ -1,0 +1,43 @@
+.Card{
+    width: 250px;
+    height: 350px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    margin: 1rem;
+    box-shadow:grey;
+    
+}
+.Card .Tituloproducto {
+    font-weight: bolder;
+    font-family:'Lucida Sans';
+    font-size: 20px;
+    
+}
+.Card .Imgproducto {
+    width: 100%;
+    height: 60%;
+    padding: 0;
+    
+}
+.Card .Price {
+   
+    font-family:'Lucida Sans';
+    font-size: 15px;
+    margin: 0.5rem;
+}
+.Description {
+   
+    margin: 0;
+}
+button {
+    color: white;
+    font-weight: bolder;
+    font-family:'Lucida Sans';
+    font-size: 15px;
+    border-radius: 0.5rem;
+    background-color: black;
+    cursor: pointer;
+    
+    
+}
