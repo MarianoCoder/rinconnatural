@@ -1,12 +1,12 @@
 import * as React from "react";
-import Item from "../Item/Item";
+import { useParams } from "react-router";
 
 
 
-
-const ItemDetail = ({unNumero}) =>{
+const ProductDetail = () => {
     const [items, setItems] = React.useState ([]);
     const [cargando, setCargando] = React.useState(false)
+    const {id} = useParams();
     
 
     React.useEffect(()=>{
@@ -48,22 +48,13 @@ const ItemDetail = ({unNumero}) =>{
               description: "Repostería",
               price: 410,
               image: "https://neufood.com.ar/wp-content/uploads/2020/10/dona_magda_ghee1-d5c7612d1860efb58815951819464687-640-0.jpg"
-            }]
-            const categorias =[{
-              id: 0,
-              name: "Reposteria"
-            },
-            {id: 1,
-              name: "Herboristeria"
-            }]
+            }[id]]
 
-            
-            const productId = productos.filter(productos => productos.id === 4)
 
         const getProducts=()=>{
         return new Promise ((resolve) =>{
             setTimeout(()=>{
-                resolve(productId);
+                resolve(id);
             }, 2000);
         });
     };
@@ -71,36 +62,24 @@ const ItemDetail = ({unNumero}) =>{
         setCargando(true);
         getProducts().then((result)=> setItems(result))
         .finally(()=> setCargando(false));
-    }, []);
+    }, [id]);
 
-    const comprarProducto =(product) => {
-      console.log(`Has comprado el producto: ${product}`)
-    };
-
+    
    
     
   
   return (
   <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
       {cargando &&  <p>Cargando . . .</p>}
-      {items.map((producto)=>{
-        return (
-         
-        <Item 
-        key={producto.id}
-        title= {producto.title}
-        imagen={producto.image}
-        description= {producto.description}
-        price={producto.price}
-        comprar={comprarProducto}
-        />
-      );
-    })}
+      
+
+       
+        <p>{items.title}</p>
+        
+        
     
   </div>
   );
   };
 
-
-  
-  export default ItemDetail;
+export default ProductDetail;

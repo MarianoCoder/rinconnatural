@@ -2,10 +2,7 @@ import * as React from 'react';
 import Item from "../Item/Item";
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 98a20a8655ea9660ebb4c2e1f04ebaf25433430a
 const ItemList = ({unNumero}) =>{
     const [items, setItems] = React.useState ([]);
     const [cargando, setCargando] = React.useState(false)
@@ -29,19 +26,21 @@ const ItemList = ({unNumero}) =>{
     };
   
   return (
-  <div style={{display : "flex", justifyContent: "space-evently"}}>
+  <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
       {cargando &&  <p>Cargando . . .</p>}
       {items.map((producto)=>{
         return (
-           
+        
         <Item 
         key={producto.id}
+        productId={producto.id}
         title= {producto.title}
         imagen={producto.image}
         description= {producto.description}
         price={producto.price}
         comprar={comprarProducto}
         />
+        
       );
     })}
     
@@ -55,19 +54,46 @@ const ItemList = ({unNumero}) =>{
   image: "https://larepo.com.ar/dlr/12-home_default/almendras-peladas-x-1-kg.jpg",
   description: "Frutos secos", 
   price: "$160"},
-
   {id : 1 ,
   title: "Nueces", 
   image: "https://larepo.com.ar/dlr/411-home_default/nuez-pelada-dorada-x-1-kg.jpg", 
   description: "Frutos secos", 
   price: "$120"},
-
   {id : 2 ,
   title: "Avellanas", 
   image: "https://larepo.com.ar/dlr/7336-home_default/avellanas-peladas-x-500-g.jpg",
   description: "Frutos secos", 
   price: "$180"},
-  
+  {
+    id: 3,
+    title: "Chocolate",
+    description: "Repostería",
+    price: "$330",
+    image: "https://larepo.com.ar/dlr/7651-home_default/chocolate-familiar-negro-para-taza-con-stevia-x-100-g-colonial.jpg"
+  },
+  {
+    id: 4,
+    title: "Pasta de Mani",
+    description: "Repostería",
+    price: "$350",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVeXCWQVrgSEcR_Jzrh6qBjEedJLXJDw07w&usqp=CAU"
+  },
+  {
+    id: 5,
+    title: "Ghee",
+    description: "Repostería",
+    price: "$410",
+    image: "https://neufood.com.ar/wp-content/uploads/2020/10/dona_magda_ghee1-d5c7612d1860efb58815951819464687-640-0.jpg"
+  }
 ]
+
+const categorias =[{
+  id: 0,
+  name: "Reposteria"
+},
+{id: 1,
+  name: "Herboristeria"
+}]
+
   
   export default ItemList ;
