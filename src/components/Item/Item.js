@@ -3,7 +3,7 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 
-const Item = ({ title, description, imagen, comprar, price, productId }) =>{
+const Item = ({ title, description, image, comprar, price, productId }) =>{
 
 
 
@@ -12,7 +12,7 @@ const Item = ({ title, description, imagen, comprar, price, productId }) =>{
         <span className="Tituloproducto">{title}</span>
         <Link to={`/productos/${productId}`}>
         <img className="Imgproducto"
-            src={imagen}
+            src={image}
             alt="imagen"/> </Link>
             <p className="Description">{description}</p>
             <p className="Price">{price}</p>

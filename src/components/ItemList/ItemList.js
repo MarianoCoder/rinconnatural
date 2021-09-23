@@ -34,7 +34,7 @@ const ItemList = ({unNumero}) =>{
         key={producto.id}
         productId={producto.id}
         title= {producto.title}
-        imagen={producto.image}
+        image={producto.image}
         description= {producto.description}
         price={producto.price}
         comprar={comprarProducto}

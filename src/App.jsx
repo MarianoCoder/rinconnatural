@@ -18,7 +18,7 @@ function App() {
       
       <Route exact path="/" component={Home} />
       <Route exact path="/counter" component={Counter} />
-      <Route exact path="/product/:id" component={ProductDetail} />
+      <Route exact path="/productos/:id" component={ProductDetail} />
       <Route path="*" component={NotFound} />
       </Switch>
       <footer>Footer</footer>
