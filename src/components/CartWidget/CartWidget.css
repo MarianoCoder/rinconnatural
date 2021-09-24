@@ -4,8 +4,8 @@
     height: 50px;
     align-items: right;
     justify-content: right;
-    position: absolute;
-    margin-left: 1299px;
+    position:fixed;
+    margin-left: 1284px;
     cursor:pointer;
     background-color: blueviolet;
 
