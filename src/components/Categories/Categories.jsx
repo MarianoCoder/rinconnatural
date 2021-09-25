@@ -45,7 +45,7 @@ const [categories, setCategories] = React.useState([]);
                    </option>
                ))}
            </select>
-           
+        
         </div>
     )
 }
