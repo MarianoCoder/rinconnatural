@@ -7,7 +7,6 @@ import { useParams } from "react-router";
 
 const ProductDetail = () => {
   const [items, setItems] = React.useState ([]);
-  const [cargando, setCargando] = React.useState(false)
   const {id} = useParams();
 
   console.log(id)
@@ -36,21 +35,21 @@ const ProductDetail = () => {
               id: "3",
               title: "Chocolate",
               description: "Repostería",
-              price: 330,
+              price: "$330",
               image: "https://larepo.com.ar/dlr/7651-home_default/chocolate-familiar-negro-para-taza-con-stevia-x-100-g-colonial.jpg"
             },
             {
               id: "4",
               title: "Pasta de Mani",
               description: "Repostería",
-              price: 350,
+              price: "$350",
               image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVeXCWQVrgSEcR_Jzrh6qBjEedJLXJDw07w&usqp=CAU"
             },
             {
               id: "5",
               title: "Ghee",
               description: "Repostería",
-              price: 410,
+              price: "$410",
               image: "https://neufood.com.ar/wp-content/uploads/2020/10/dona_magda_ghee1-d5c7612d1860efb58815951819464687-640-0.jpg"
             }]
 
@@ -64,7 +63,7 @@ const ProductDetail = () => {
             },);
         });
     };
-        setCargando(true);
+        
         getProducts().then((result) => setItems(result))
        
       }, [id]);
