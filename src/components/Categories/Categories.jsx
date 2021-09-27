@@ -6,16 +6,16 @@ const [categories, setCategories] = React.useState([]);
     React.useEffect(()=>{
 
         const categorias =[{
-            id: 0,
+            id: "0",
             name: "Suplementos"
           },
-          {id: 1,
+          {id: "1",
             name: "Herboristeria"
           },
-          {id: 2,
+          {id: "2",
             name: "Reposteria"
           },
-          {id: 3,
+          {id: "3",
             name: "Frutos secos"
           }]
 
@@ -37,7 +37,7 @@ const [categories, setCategories] = React.useState([]);
 
     return (
         <div>
-           <select defaultValue="" onChange={handleChange }>
+           <select defaultValue="" onChange={handleChange}>
                <option value="" disabled>Seleccione una categoria</option>
                {categories?.map((category)=>(
                <option value={category.id} key={category.id}>
@@ -45,7 +45,7 @@ const [categories, setCategories] = React.useState([]);
                    </option>
                ))}
            </select>
-           
+        
         </div>
     )
 }

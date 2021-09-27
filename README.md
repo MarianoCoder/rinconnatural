@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Información del proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un proyecto realizado en concepto de práctica correspondiente al curso de ReactJS de Coder House.
+El objetivo es crear un carrito de compras compuesto por varios componentes funcionales.
 
 ## Available Scripts
 

@@ -25,10 +25,10 @@ function NavBar() {
         <NavLink to="/">Home</NavLink>
         </li>
         <li>
-        <NavLink to="/reposteria/:id">Reposteria</NavLink>
+        <NavLink to="/category/Reposteria/">Reposteria</NavLink>
         </li>
         <li>
-        <NavLink to="/herboristeria/:id">Herboristeria</NavLink>
+        <NavLink to="/category/Frutos/">Frutos Secos</NavLink>
         </li>
         <li>
         <NavLink to="/counter">Counter</NavLink>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Item from "../components/Item/Item";
+import ItemDetail from "../components/ItemDetail/ItemDetail";
 import { useParams } from "react-router";
 
 
@@ -76,7 +76,7 @@ const ProductDetail = () => {
     <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
      
       
-​<Item title={items.title} description={items.description} price={items.price} image={items.image} />
+​<ItemDetail title={items.title} description={items.description} price={items.price} image={items.image} />
       
       
         
