@@ -66,7 +66,7 @@ const ItemDetail = () =>{
         }
       ]
       
-      const categorias =[{
+      const categories =[{
         id: 0,
         name: "Suplementos"
       },
@@ -96,9 +96,9 @@ const ItemDetail = () =>{
         .finally(()=> setCargando(false));
     }, [id]);
 
-    const comprarProducto =(product) => {
-      console.log(`Has comprado el producto: ${product}`)
-    };
+    //const comprarProducto =(product) => {
+     // console.log(`Has comprado el producto: ${product}`)
+    //};
 
    
     
@@ -106,8 +106,8 @@ const ItemDetail = () =>{
   <div style={{display : "block", justifyContent: "center", itemsAlign: "center"}}>
           
     <Item title={items.title} description={items.description} price={items.price} image={items.image}/>
-    <p>Usted está comprando: {count} un </p>
-
+    {//<p>Usted está comprando: {count} un </p>
+    }
       {count ? <button> <Link to="/cart">Terminar compra</Link></button>:
       <ItemCount stock="6" initial="1" onAdd={addHandler} />}
 

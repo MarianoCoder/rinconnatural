@@ -1,18 +1,12 @@
 import * as React from "react";
 import ItemDetail from "../components/ItemDetail/ItemDetail";
 import { useParams } from "react-router";
-import { useCart } from "../context/CartContext";
-
-
 
 
 const ProductDetail = () => {
   const [items, setItems] = React.useState ([]);
   const {id} = useParams();
-  const {addItem} = useCart ();
-  const [counter, setCounter] = React.useState ([1]);
-
-
+ 
   console.log(id)
     
 
@@ -72,11 +66,6 @@ const ProductDetail = () => {
        
       }, [id]);
 
-
-  const addToCart =()=>{
-    addItem(items, counter);
-  };
-    
   
   return (
     <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
@@ -85,10 +74,7 @@ const ProductDetail = () => {
 ​<ItemDetail title={items.title} description={items.description} price={items.price} image={items.image} />
       
       
-        <button style={{height:"30px"}} onClick={addToCart}> Agregar al carrito</button>
-
-        <input style={{height:"30px"}}type="number" name="counter" id="counter" min="1" max="10" value={counter} onChange={(e)=>setCounter(e.target.value)}></input>
-    
+       
   </div>
   
   )}
