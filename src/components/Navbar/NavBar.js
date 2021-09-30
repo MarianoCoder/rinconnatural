@@ -2,10 +2,13 @@ import * as React from 'react';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 import {NavLink, Link} from "react-router-dom";
+import {useCart} from "../../context/CartContext"
 
 
 function NavBar() {
+  const { getQuantity } = useCart();
 
+  
    /* const [isLoggedIn,setIsLoggedIn] = React.useState(false);
 
     const handleClick = () =>{
@@ -32,6 +35,10 @@ function NavBar() {
         </li>
         <li>
         <NavLink to="/counter">Counter</NavLink>
+        </li>
+        <li>
+          {getQuantity()}
+        <NavLink to="/cart"> Carrito</NavLink>
         </li>
       </ul>
       <CartWidget

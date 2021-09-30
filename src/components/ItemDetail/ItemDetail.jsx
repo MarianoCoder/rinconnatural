@@ -66,7 +66,7 @@ const ItemDetail = () =>{
         }
       ]
       
-      const categorias =[{
+      const categories =[{
         id: 0,
         name: "Suplementos"
       },
@@ -96,9 +96,9 @@ const ItemDetail = () =>{
         .finally(()=> setCargando(false));
     }, [id]);
 
-    const comprarProducto =(product) => {
-      console.log(`Has comprado el producto: ${product}`)
-    };
+    //const comprarProducto =(product) => {
+     // console.log(`Has comprado el producto: ${product}`)
+    //};
 
    
     

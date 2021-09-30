@@ -3,11 +3,10 @@ import ItemDetail from "../components/ItemDetail/ItemDetail";
 import { useParams } from "react-router";
 
 
-
-
 const ProductDetail = () => {
   const [items, setItems] = React.useState ([]);
   const {id} = useParams();
+
 
   console.log(id)
     
@@ -68,9 +67,6 @@ const ProductDetail = () => {
        
       }, [id]);
 
-      
-  
-    
   
   return (
     <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
@@ -79,9 +75,7 @@ const ProductDetail = () => {
 ​<ItemDetail title={items.title} description={items.description} price={items.price} image={items.image} />
       
       
-        
-        
-    
+       
   </div>
   
   )}
