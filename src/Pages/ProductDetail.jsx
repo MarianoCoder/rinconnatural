@@ -6,8 +6,7 @@ import { useParams } from "react-router";
 const ProductDetail = () => {
   const [items, setItems] = React.useState ([]);
   const {id} = useParams();
-
-
+ 
   console.log(id)
     
 
