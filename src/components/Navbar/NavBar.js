@@ -6,7 +6,7 @@ import {useCart} from "../../context/CartContext"
 
 
 function NavBar() {
-  const { getQuantity } = useCart();
+  const { cart } = useCart();
 
   
    /* const [isLoggedIn,setIsLoggedIn] = React.useState(false);
@@ -37,7 +37,10 @@ function NavBar() {
         <NavLink to="/counter">Counter</NavLink>
         </li>
         <li>
-          {getQuantity()}
+          {
+            cart.length !== 0 && <span>{cart.length}</span>
+        
+          }
         <NavLink to="/cart"> Carrito</NavLink>
         </li>
       </ul>

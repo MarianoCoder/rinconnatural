@@ -4,18 +4,21 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import './ItemDetail.css'
-
+import {useCart} from "../../context/CartContext"
 
 const ItemDetail = () =>{
     const [count, setCount] = React.useState(0)
     const [items, setItems] = React.useState ([]);
     const [cargando, setCargando] = React.useState(false)
     const {id} = useParams();
+    const {addItem, cart} = useCart ();
 
     const addHandler = (contador)=>{
-      console.log("cantidad",contador)
       setCount(contador)
+      addItem(items, count)
     }
+
+    console.log(cart)
     
 
     React.useEffect(()=>{
@@ -100,7 +103,7 @@ const ItemDetail = () =>{
      // console.log(`Has comprado el producto: ${product}`)
     //};
 
-   
+
     
   return (
   <div style={{display : "block", justifyContent: "center", itemsAlign: "center"}}>
@@ -112,7 +115,7 @@ const ItemDetail = () =>{
       <ItemCount stock="6" initial="1" onAdd={addHandler} />}
 
 
-  
+
   </div>
   );
   };
