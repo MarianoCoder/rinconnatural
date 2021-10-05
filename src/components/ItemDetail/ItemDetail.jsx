@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import './ItemDetail.css'
 import {useCart} from "../../context/CartContext"
 
-
 const ItemDetail = () =>{
     const [count, setCount] = React.useState(0)
     const [items, setItems] = React.useState ([]);
@@ -104,7 +103,7 @@ const ItemDetail = () =>{
      // console.log(`Has comprado el producto: ${product}`)
     //};
 
-   
+
     
   return (
   <div style={{display : "block", justifyContent: "center", itemsAlign: "center"}}>
@@ -116,7 +115,7 @@ const ItemDetail = () =>{
       <ItemCount stock="6" initial="1" onAdd={addHandler} />}
 
 
-  
+
   </div>
   );
   };
