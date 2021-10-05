@@ -4,6 +4,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import './ItemDetail.css'
+import {useCart} from "../../context/CartContext"
 
 
 const ItemDetail = () =>{
@@ -11,12 +12,15 @@ const ItemDetail = () =>{
     const [items, setItems] = React.useState ([]);
     const [cargando, setCargando] = React.useState(false)
     const {id} = useParams();
+    const {addItem, quantity} = useCart ();
+    
 
     const addHandler = (contador)=>{
+
       console.log("cantidad",contador)
       setCount(contador)
+      addItem(items, quantity)
     }
-    
 
     React.useEffect(()=>{
       const productos =[
@@ -106,8 +110,8 @@ const ItemDetail = () =>{
   <div style={{display : "block", justifyContent: "center", itemsAlign: "center"}}>
           
     <Item title={items.title} description={items.description} price={items.price} image={items.image}/>
-    <p>Usted está comprando: {count} un </p>
-
+    {
+    }
       {count ? <button> <Link to="/cart">Terminar compra</Link></button>:
       <ItemCount stock="6" initial="1" onAdd={addHandler} />}
 

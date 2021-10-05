@@ -1,17 +1,29 @@
 import * as React from "react";
 
-const CartContext = React.createContext([]);
+const CartContext = React.createContext();
 CartContext.displayName = "CartContext";
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = React.useState ([]);
+    
 
     const addItem = (item, quantity) => {
         const newItem ={item, quantity};
-        setCart((prevState) => [...prevState, newItem]);
+        
+
+        const isInCart = cart.find(x => x.id === item.id)
+
+        if(isInCart){
+            setCart(cart.map(x => x.id === isInCart.id
+                ? item
+                : x
+                ))
+        }else{
+            setCart((prevState) => [...prevState, newItem]);
+        }
     };
 
-    const removeItem = (id) =>{
+    const removeItem = () =>{
          //Eliminar producto con id elegido
     };
 
@@ -20,7 +32,7 @@ export const CartProvider = ({ children }) => {
     };
 
     const isInCart = (id) =>{
-        //Chequear si existe un producto con el id elegido
+        
     }
 
     const getQuantity = () =>{
