@@ -11,14 +11,14 @@ const ItemDetail = () =>{
     const [items, setItems] = React.useState ([]);
     const [cargando, setCargando] = React.useState(false)
     const {id} = useParams();
-    const {addItem, quantity} = useCart ();
+    const {addItem} = useCart ();
     
 
     const addHandler = (contador)=>{
 
       console.log("cantidad",contador)
       setCount(contador)
-      addItem(items, quantity)
+      addItem(items, contador)
     }
 
     React.useEffect(()=>{
