@@ -7,7 +7,7 @@ import './ItemDetail.css'
 import {useCart} from "../../context/CartContext"
 
 const ItemDetail = () =>{
-    const [count, setCount] = React.useState(0)
+    const [isBuy, setIsBuy] = React.useState(false)
     const [items, setItems] = React.useState ([]);
     const [cargando, setCargando] = React.useState(false)
     const {id} = useParams();
@@ -16,7 +16,7 @@ const ItemDetail = () =>{
 
     const addHandler = (quantity)=>{
 
-      //setCount(count)
+      setIsBuy(true)
       addItem({...items, quantity: quantity}, )
     }
 
@@ -110,11 +110,9 @@ const ItemDetail = () =>{
     <Item key={items.id} title={items.title} description={items.description} price={items.price} image={items.image}/>
     {
     }
-      {count ? <button> <Link to="/cart">Terminar compra</Link></button>:
-      <ItemCount stock="6" initial="1" onAdd={addHandler} />}
-
-
-
+      {!isBuy ? <ItemCount stock="6" initial="1" onAdd={addHandler} /> :
+      <Link to="/cart"><button>Terminar compra</button></Link>
+      }
   </div>
   );
   };

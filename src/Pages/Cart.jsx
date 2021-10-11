@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./Cart.css"
 import { useCart } from "../context/CartContext"
 
 const Cart = () => {
@@ -24,12 +25,14 @@ const Cart = () => {
            {
                cart.map((items)=>(
                 
-                <div key={items.id}>
+                <div key={items.id} className="cartResume">
                     <span>{items.title}</span>
                     <span>{items.quantity}</span>
                     <span>$ {items.price * items.quantity}</span>
+                    <button onClick={()=>removeItem(items)}>Eliminar</button>
                 </div>
            ))}
+           <h2> Total: {cart.reduce((a,i) => a + i.price * i.quantity, 0)}</h2>
 
            <button onClick={clearCart}> Vaciar Carrito </button>
         </div>

@@ -23,17 +23,16 @@ export const CartProvider = ({ children }) => {
         }
     };
 
-    const removeItem = () =>{
-         //Eliminar producto con id elegido
+    const removeItem = (items) =>{
+        setCart(cart.filter(x => x.id !== items.id))
+        
     };
 
     const clear = () =>{
         setCart([])
     };
 
-    const isInCart = (id) =>{
-        
-    }
+    
 
     const getQuantity = () =>{
         let quantity = 0;
@@ -45,7 +44,7 @@ export const CartProvider = ({ children }) => {
         return quantity;
     };
 
-    const value={ cart, addItem, removeItem, clear, isInCart, getQuantity };
+    const value={ cart, addItem, removeItem, clear, getQuantity };
 
     return <CartContext.Provider value={value}>{children} </CartContext.Provider>
 };
