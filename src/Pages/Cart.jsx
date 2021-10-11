@@ -1,24 +1,39 @@
 import * as React from "react";
-import {useCart} from "../context/CartContext"
+import { useCart } from "../context/CartContext"
 
 const Cart = () => {
-
-    const {clear} = useCart ();
-    const [remove, setRemove] = React.useState ([])
-    const [items, setItems] = React.useState ([]);
-
+    
+    const {cart, clear, removeItem} = useCart();
+    const [remove, setRemove] = React.useState([])
+    const [items, setItems] = React.useState([]);
 
     const clearCart=()=>{
         clear(remove, items);
-      };
-   
-    return (
+    };
+
+    console.log("hola",cart)
+
+    if (cart.length === 0){
+        return(
+            <div>El carrito está vacío</div>
+        )
+    }else{
+        return (
         <div>
-           <h1>Carrito</h1>
+           <h2>Tu carrito</h2>
+           {
+               cart.map((items)=>(
+                
+                <div key={items.id}>
+                    <span>{items.title}</span>
+                    <span>{items.quantity}</span>
+                    <span>$ {items.price * items.quantity}</span>
+                </div>
+           ))}
 
            <button onClick={clearCart}> Vaciar Carrito </button>
         </div>
-    )
+    )}
 }
 
 export default Cart;

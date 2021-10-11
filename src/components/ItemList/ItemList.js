@@ -15,21 +15,21 @@ const ItemList = () =>{
       
 
       const productos =[
-        {id : "0" ,
+        {id: "0" ,
         title: "Almendras", 
         image: "https://larepo.com.ar/dlr/12-home_default/almendras-peladas-x-1-kg.jpg",
         description: "Frutos secos", 
         price: "$160",
         category: "Frutos"
       },
-        {id : "1" ,
+        {id: "1" ,
         title: "Nueces", 
         image: "https://larepo.com.ar/dlr/411-home_default/nuez-pelada-dorada-x-1-kg.jpg", 
         description: "Frutos secos", 
         price: "$120",
         category: "Frutos"
       },
-        {id : "2" ,
+        {id: "2" ,
         title: "Avellanas", 
         image: "https://larepo.com.ar/dlr/7336-home_default/avellanas-peladas-x-500-g.jpg",
         description: "Frutos secos", 
@@ -93,16 +93,16 @@ const ItemList = () =>{
   return (
   <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
       {cargando &&  <p>Cargando . . .</p>}
-      {items.map((producto)=>{
+      {items.map((items)=>{
         return (
         
         <Item 
-        key={producto.id}
-        productId={producto.id}
-        title= {producto.title}
-        image={producto.image}
-        description= {producto.description}
-        price={producto.price}
+        key={items.id}
+        productId={items.id}
+        title= {items.title}
+        image={items.image}
+        description= {items.description}
+        price={items.price}
         comprar={comprarProducto}
         />
         

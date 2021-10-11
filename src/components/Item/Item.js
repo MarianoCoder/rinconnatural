@@ -16,7 +16,7 @@ const Item = ({ title, description, image, comprar, price, productId }) =>{
             alt="imagen"/> </Link>
             <p className="Description">{description}</p>
             <p className="Price">{price}</p>
-            <button onClick={comprar}>Comprar</button>
+            
         
         </div>
     );

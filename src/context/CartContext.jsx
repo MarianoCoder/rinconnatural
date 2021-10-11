@@ -7,19 +7,19 @@ export const CartProvider = ({ children }) => {
     const [cart, setCart] = React.useState ([]);
     
 
-    const addItem = (item, quantity) => {
-        const newItem ={item, quantity};
+    const addItem = (items) => {
+        
         
 
-        const isInCart = cart.find(x => x.id === item.id)
+        const isInCart = cart.find(x => x.id === items.id)
 
         if(isInCart){
             setCart(cart.map(x => x.id === isInCart.id
-                ? item
+                ? items
                 : x
                 ))
         }else{
-            setCart((prevState) => [...prevState, newItem]);
+            setCart((prevState) => [...prevState, items]);
         }
     };
 
