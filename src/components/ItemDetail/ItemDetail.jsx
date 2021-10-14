@@ -20,7 +20,7 @@ const ItemDetail = () =>{
       addItem({...items, quantity: quantity}, )
     }
 
-    React.useEffect(()=>{
+   /* React.useEffect(()=>{
       const productos =[
         {id: "0" ,
         title: "Almendras", 
@@ -96,7 +96,7 @@ const ItemDetail = () =>{
         setCargando(true);
         getProducts().then((result)=> setItems(result))
         .finally(()=> setCargando(false));
-    }, [id]);
+    }, [id]);*/
 
     //const comprarProducto =(product) => {
      // console.log(`Has comprado el producto: ${product}`)

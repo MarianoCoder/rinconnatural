@@ -1,17 +1,37 @@
 import * as React from 'react';
 import Item from "../Item/Item";
 import { useParams } from "react-router";
+import { getFirestore } from '../../firebase';
 
 
 const ItemList = () =>{
-    const [items, setItems] = React.useState ([]);
+    const [data, setData] = React.useState([]);
     const [cargando, setCargando] = React.useState(false)
+    const [error, setError] = React.useState(null);
     const {category} = useParams()
 
+    React.useEffect(() => {
+      const db = getFirestore();
+
+      const productsColletion = db.collection("products");
+
+      setCargando(true);
+      productsColletion
+      .get()
+      .then((querySnapshot)=>{
+        if(querySnapshot.empy){
+          console.log("No hay productos");
+        }else{
+          setData(querySnapshot.docs.map((doc)=> ({id: doc.id, ...doc.data() })));
+        }
+      })
+      .catch((error)=> setError(error))
+      .finally(()=>setCargando(false));
+    }, []);
 
     
 
-    React.useEffect(()=>{
+    /*React.useEffect(()=>{
       
 
       const productos =[
@@ -81,7 +101,7 @@ const ItemList = () =>{
     setCargando(true);
       getProducts(categoryProducts).then((result)=> setItems(result))
       .finally(()=> setCargando(false));
-    },[category]);
+    },[category]);*/
 
     const comprarProducto =(product) => {
       console.log(`Has comprado el producto: ${product}`)
@@ -93,7 +113,7 @@ const ItemList = () =>{
   return (
   <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
       {cargando &&  <p>Cargando . . .</p>}
-      {items.map((items)=>{
+      {data.map((items)=>{
         return (
         
         <Item 

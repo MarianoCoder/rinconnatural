@@ -1,16 +1,37 @@
 import * as React from "react";
 import ItemDetail from "../components/ItemDetail/ItemDetail";
 import { useParams } from "react-router";
+import { getFirestore } from "../firebase";
 
 
 const ProductDetail = () => {
-  const [items, setItems] = React.useState ([]);
+  const [items, setItems] = React.useState ({});
+  const [cargando, setCargando] = React.useState(false)
   const {id} = useParams();
  
 
-    
+  React.useEffect(() => {
 
-    React.useEffect(()=>{
+    const db = getFirestore();
+
+    const productsColletion = db.collection("products");
+    
+    const product = productsColletion.doc(id);
+
+    product
+    .get()
+    .then((doc)=>{
+      if(!doc.exists){
+        console.log("El producto no existe");
+      }
+    }
+    )
+    .catch(()=>{})
+    .finally(()=>{});
+
+  }, [id]);
+
+    /*React.useEffect(()=>{
         const productos =[
             {id: "0",
             title: "Almendras", 
@@ -64,7 +85,7 @@ const ProductDetail = () => {
         
         getProducts().then((result) => setItems(result))
        
-      }, [id]);
+      }, [id]);*/
 
   
   return (
