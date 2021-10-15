@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import './ItemDetail.css'
 import {useCart} from "../../context/CartContext"
+import { getFirestore } from "../../firebase";
 
 const ItemDetail = () =>{
     const [isBuy, setIsBuy] = React.useState(false)
@@ -12,13 +13,36 @@ const ItemDetail = () =>{
     const [cargando, setCargando] = React.useState(false)
     const {id} = useParams();
     const {addItem} = useCart ();
-    
+  
 
     const addHandler = (quantity)=>{
 
       setIsBuy(true)
       addItem({...items, quantity: quantity}, )
     }
+
+    React.useEffect(() => {
+
+      const db = getFirestore();
+  
+      const productsCollection = db.collection("products");
+      
+      const items = productsCollection.doc(id);
+  
+      items
+      .get()
+      .then((doc)=>{
+        if(!doc.exists){
+          console.log("El producto no existe");
+        }else{
+         setItems({id: doc.id, ...doc.data()})
+        }
+      }
+      )
+      .catch(()=>{})
+      .finally(()=>{});
+  
+    }, [id]);
 
    /* React.useEffect(()=>{
       const productos =[

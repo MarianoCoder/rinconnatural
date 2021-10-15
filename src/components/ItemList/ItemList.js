@@ -13,16 +13,16 @@ const ItemList = () =>{
     React.useEffect(() => {
       const db = getFirestore();
 
-      const productsColletion = db.collection("products");
+      const productsCollection = db.collection("products");
 
       setCargando(true);
-      productsColletion
+      productsCollection
       .get()
       .then((querySnapshot)=>{
         if(querySnapshot.empy){
           console.log("No hay productos");
         }else{
-          setData(querySnapshot.docs.map((doc)=> ({id: doc.id, ...doc.data() })));
+          setData(querySnapshot.docs.map((doc)=> ({id: doc.id, ...doc.data()})));
         }
       })
       .catch((error)=> setError(error))
