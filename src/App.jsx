@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import ProductDetail from "./pages/ProductDetail";
 import ItemListContainer from "./containers/ItemListContainer";
 import Cart from "./pages/Cart";
+import Login from "./components/Login/login"
 //import { CartProvider } from "./context/CartContext"
 //import UserContext from "./context/UserContext"
 
@@ -19,6 +20,7 @@ function App() {
     <BrowserRouter>
     
       <NavBar />
+      <Login />
       <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/counter" component={Counter} />
