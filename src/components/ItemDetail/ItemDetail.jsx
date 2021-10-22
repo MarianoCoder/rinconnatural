@@ -131,7 +131,7 @@ const ItemDetail = () =>{
   return (
   <div style={{display : "block", justifyContent: "center", itemsAlign: "center"}}>
           
-    <Item key={items.id} title={items.title} description={items.description} price={items.price} image={items.image}/>
+    <Item key={items.id} title={items.title} description={items.description} coin={items.coin} price={items.price} image={items.image}/>
     {
     }
       {!isBuy ? <ItemCount stock="6" initial="1" onAdd={addHandler} /> :

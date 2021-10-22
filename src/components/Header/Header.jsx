@@ -15,8 +15,7 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-            <h1>Bienvenidos a la {this.props.name}</h1>
-            <p className="greeting">{this.state.name}</p>
+        
             </div>
         )
     }

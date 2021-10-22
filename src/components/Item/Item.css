@@ -1,13 +1,15 @@
 .Card{
     width: 230px;
     height: 330px;
-    border: 1px solid grey;
+    border: 2px solid grey;
     box-sizing: border-box;
+    border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 1rem;
     box-shadow:grey;
     font-family: 'Josefin Sans';
     font-size: 20px;
+    font-weight: bold;
     
 }
 .Card .Tituloproducto {

@@ -3,6 +3,8 @@ import withFirebaseAuth from "react-with-firebase-auth";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import { getFirebase } from "../../firebase";
+import "./login.css"
+
 
 
 const firebaseApp = getFirebase();
@@ -11,16 +13,17 @@ class Login extends Component {
     render (){
         const {user, signOut, signInWithGoogle} = this.props;
         return (
-            <div>
+            <div className="loginBox">
+                
                 {
                     user ?
-                    <p>Hola, {user.displayName}</p>
+                    <p>Hola! {user.displayName}</p>
                     : <p>Iniciar sesión</p>
                 }
                 {
                     user
-                    ? <button onClick={signOut}>Cerrar Sesión</button>
-                    : <button onClick={signInWithGoogle}>Loguearse con Google</button>
+                    ? <button id="sesion" onClick={signOut}>Cerrar Sesión</button>
+                    : <button id="sesion" onClick={signInWithGoogle}>Loguearse con Google</button>
                 }
             </div>
         );

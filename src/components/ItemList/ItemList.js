@@ -48,6 +48,7 @@ const ItemList = () =>{
         image={items.image}
         description= {items.description}
         price={items.price}
+        coin={items.coin}
         comprar={comprarProducto}
         />
         
