@@ -1,40 +1,42 @@
 .Card{
     width: 230px;
     height: 330px;
-    border: 1px solid grey;
+    border: 2px solid grey;
     box-sizing: border-box;
+    border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 1rem;
     box-shadow:grey;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+    font-weight: bold;
     
 }
 .Card .Tituloproducto {
     font-weight: bolder;
-    font-family:'Lucida Sans';
-    font-size: 20px;
+    font-family: 'Josefin Sans';
+    font-size: 25px;
     
 }
 .Card .Imgproducto {
     width: 80%;
     height: 50%;
     padding: 0;
-    
-   
-    font-family:'Lucida Sans';
+    font-family:'Josefin Sans';
     font-size: 15px;
     margin: 0.5rem;
 }
 .Description {
    
     margin: 0;
-
+    font-family:'Josefin Sans';
 }
 button {
     color: white;
     font-weight: bolder;
-    font-family:'Lucida Sans';
+    font-family:'Josefin Sans';
     font-size: 15px;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     background-color: black;
     cursor: pointer;
     

@@ -1,4 +1,6 @@
-import firebase from "firebase"
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCqP9rSrwkGwVTt_FdsGC29eBf5QiqD_60",
   authDomain: "rincon-natural.firebaseapp.com",
@@ -9,6 +11,9 @@ const firebaseConfig = {
   measurementId: "G-C89H0361LN"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const app = firebase.initializeApp(firebaseConfig);
+
+export const getFirebase = () => app;
+
+//Servicios
+export const getFirestore = () => firebase.firestore(app);

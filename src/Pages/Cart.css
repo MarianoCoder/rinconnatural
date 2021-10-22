@@ -1,0 +1,28 @@
+body{
+    justify-content: space-between;
+}
+
+.emptyCart{
+    margin: 10rem;
+    font-size: 30px;
+
+}
+
+.btnCart{
+    font-family:'Josefin Sans';
+    font-weight: normal;
+    height: 1.6rem;
+    margin: 0.3rem;
+}
+
+
+.cartResume{
+    font-weight:normal;
+    font-family:'Josefin Sans';
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10%;
+    align-items:center;
+    text-align: center;
+    justify-content:center;
+}

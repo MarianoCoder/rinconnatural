@@ -3,7 +3,8 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 
-const Item = ({ title, description, image, comprar, price, productId }) =>{
+
+const Item = ({ title, description, image, price, productId, coin }) =>{
 
 
 
@@ -15,8 +16,9 @@ const Item = ({ title, description, image, comprar, price, productId }) =>{
             src={image}
             alt="imagen"/> </Link>
             <p className="Description">{description}</p>
-            <p className="Price">{price}</p>
-            <button onClick={comprar}>Comprar</button>
+            <p className="Price">{coin}{price}</p>
+            
+            
         
         </div>
     );

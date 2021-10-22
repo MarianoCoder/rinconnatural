@@ -1,12 +1,11 @@
 import * as React from 'react';
-//import {useCart} from "../../context/CartContext"
+import "./ItemCount.css"
 
 
-function ItemCount({stock, initial, onAdd}) {
-    //const {addItem} = useCart ();
+function ItemCount({stock, initial, onAdd }) {
+   
     const[counter, setCounter] = React.useState(1);
-    const [items, setItems] = React.useState ([]);
-
+    
     const handleClick = () => {
         if (counter < stock)
         setCounter((stock)=> stock + 1);
@@ -17,9 +16,7 @@ function ItemCount({stock, initial, onAdd}) {
         if (counter === 1)
         setCounter(counter)
     }
-    //const addToCart =()=>{
-        //addItem(items, counter);
-      //};
+    
     return (
         <div>
         <div>
@@ -28,7 +25,9 @@ function ItemCount({stock, initial, onAdd}) {
           <button type="number" onClick={handleClickmenos} onChange={(e)=>setCounter(e.target.value)}>-</button> {counter} <button type="number" onClick={handleClick} onChange={(e)=>setCounter(e.target.value)}>+</button> 
         </div>
         <div>
-            <button onClick={onAdd} value={counter} >Agregar al carrito</button>
+            <button className="counterButton" onClick={()=>onAdd(counter)}>Agregar al carrito</button>
+            
+            
         </div>
         </div>
     );

@@ -2,3 +2,14 @@ a{
     color:white;
     text-decoration: none;
 }
+
+.cardDetail{
+    display: block;
+    margin-left: 34rem;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+
+}

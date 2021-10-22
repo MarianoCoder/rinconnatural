@@ -1,0 +1,25 @@
+body{
+    font-family: 'Josefin Sans';
+    font-size: 20px;   
+    
+}
+
+
+.saludo{
+    margin: 1rem;
+    
+}
+
+.sesion{
+    
+    color: white;
+    font-family:'Josefin Sans';
+    font-weight: normal;
+    height: 1.6rem;
+    margin: 0;
+    margin-bottom: 2rem;
+
+}
+
+
+
