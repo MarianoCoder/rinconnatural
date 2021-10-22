@@ -1,5 +1,8 @@
 import * as React from 'react';
+<<<<<<< HEAD
 import "./ItemCount.css"
+=======
+>>>>>>> 9997aa136d68d5f56b990c9589212c6b85bce1dd
 
 
 function ItemCount({stock, initial, onAdd }) {
@@ -25,8 +28,12 @@ function ItemCount({stock, initial, onAdd }) {
           <button type="number" onClick={handleClickmenos} onChange={(e)=>setCounter(e.target.value)}>-</button> {counter} <button type="number" onClick={handleClick} onChange={(e)=>setCounter(e.target.value)}>+</button> 
         </div>
         <div>
+<<<<<<< HEAD
             <button className="counterButton" onClick={()=>onAdd(counter)}>Agregar al carrito</button>
             
+=======
+            <button onClick={()=>onAdd(counter)}>Agregar al carrito</button>
+>>>>>>> 9997aa136d68d5f56b990c9589212c6b85bce1dd
             
         </div>
         </div>

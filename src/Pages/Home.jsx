@@ -7,7 +7,10 @@ const Home = () => {
   
     return (
         <div>
+<<<<<<< HEAD:src/Pages/home.jsx
            
+=======
+>>>>>>> 9997aa136d68d5f56b990c9589212c6b85bce1dd:src/Pages/Home.jsx
            <Header />
            <ItemListContainer />
         </div>
