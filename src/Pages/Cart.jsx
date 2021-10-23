@@ -53,11 +53,7 @@ const Cart = () => {
 
     if (cart.length === 0){
         return(
-<<<<<<< HEAD
             <div className="emptyCart">Tu carrito está vacío... te esperamos en la Tienda!</div>
-=======
-            <div>El carrito está vacío</div>
->>>>>>> 9997aa136d68d5f56b990c9589212c6b85bce1dd
         )
     }else{
         return (
@@ -70,7 +66,6 @@ const Cart = () => {
                     <span>{items.title}</span>
                     <span>{items.quantity}</span>
                     <span>$ {items.price * items.quantity}</span>
-<<<<<<< HEAD
                     <button className="btnCart" onClick={()=>removeItem(items)}>Eliminar</button>
                 </div>
            ))}
@@ -78,15 +73,6 @@ const Cart = () => {
                 <button className="btnCart" onClick={handleCheckout}>Finalizar Compra</button>
                 <button className="btnCart" onClick={handleUpdate}>Modificar Carrito</button>
                 <button className="btnCart" onClick={handleDelete}>Eliminar Orden </button>
-=======
-                    <button onClick={()=>removeItem(items)}>Eliminar</button>
-                </div>
-           ))}
-           <h2> Total: $ {cart.reduce((a,i) => a + i.price * i.quantity, 0)}</h2>
-                <button onClick={handleCheckout}>Finalizar Compra</button>
-                <button onClick={handleUpdate}>Modificar Carrito</button>
-                <button onClick={handleDelete}>Eliminar Orden </button>
->>>>>>> 9997aa136d68d5f56b990c9589212c6b85bce1dd
            
            
         </div>

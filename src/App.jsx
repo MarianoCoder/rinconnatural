@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Counter from "./pages/Counter";
 import NotFound from "./pages/NotFound";
@@ -9,11 +9,6 @@ import ProductDetail from "./pages/ProductDetail";
 import ItemListContainer from "./containers/ItemListContainer";
 import Cart from "./pages/Cart";
 import Login from "./components/Login/login"
-//import { CartProvider } from "./context/CartContext"
-//import UserContext from "./context/UserContext"
-import logo from "../src/components/Imagenes/logo.png"
-
-
 
 
 function App() {
@@ -21,7 +16,7 @@ function App() {
     <BrowserRouter>
     
       <NavBar />
-      <Link to="/"><img  className="logo" src={logo} alt="logo"/></Link>
+
       <Login />
       <Switch>
       <Route exact path="/" component={Home} />
