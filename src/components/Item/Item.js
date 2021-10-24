@@ -3,7 +3,8 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 
-const Item = ({ title, description, image, comprar, price, productId, coin }) =>{
+
+const Item = ({ title, description, image, price, productId, coin }) =>{
 
 
 
@@ -16,6 +17,7 @@ const Item = ({ title, description, image, comprar, price, productId, coin }) =>
             alt="imagen"/> </Link>
             <p className="Description">{description}</p>
             <p className="Price">{coin}{price}</p>
+            
             
         
         </div>

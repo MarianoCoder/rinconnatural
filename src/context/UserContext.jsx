@@ -1,9 +1,21 @@
 import * as React from "react";
 
-const UserContext = React.createContext ("");
+const UserContext = React.createContext(null);
 export default UserContext;
 
-export const CartProvider = () =>{
+export const UserProvider = ({ children }) => {
+  const [user, setUser] = React.useState({});
 
-    return <UserContext.Provider></UserContext.Provider>;
-}
+  const value = { user, setUser };
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+};
+
+export const useUser = () => {
+  const context = React.useContext(UserContext);
+
+  if (!context) {
+    throw new Error("useUser debe usarse desde adentro de un UserProvider");
+  }
+  return context;
+};

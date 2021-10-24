@@ -52,6 +52,7 @@ const ItemList = () =>{
         comprar={comprarProducto}
         />
         
+        
       );
     })}
     

@@ -129,7 +129,7 @@ const ItemDetail = () =>{
 
     
   return (
-  <div style={{display : "block", justifyContent: "center", itemsAlign: "center"}}>
+  <div className="cardDetail">
           
     <Item key={items.id} title={items.title} description={items.description} coin={items.coin} price={items.price} image={items.image}/>
     {

@@ -1,8 +1,39 @@
-body{
+.loginBox{
     font-family: 'Josefin Sans';
-    font-size: 20px;
+    font-size: 20px;   
+    display: inline;
+    margin-right: 5rem;
     
+   
+}
+
+.logo{
+    margin-left: 1rem;
+}
+
+
+
+.saludo{
+    justify-content: right;
+    margin: 1rem;
     
+}
+
+.loginMain{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sesion{
+    
+    justify-content: right;
+    color: white;
+    font-family:'Josefin Sans';
+    font-weight: normal;
+    height: 1.6rem;
+    margin: 0;
+    margin-bottom: 2rem;
+
 }
 
 
