@@ -62,7 +62,7 @@ const Cart = () => {
     );
   } else {
     return (
-      <div>
+      <div className="boxCarrito">
         <h2>Tu carrito</h2>
         {cart.map((items) => (
           <div key={items.id} className="cartResume">

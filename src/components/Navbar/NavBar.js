@@ -22,6 +22,9 @@ function NavBar() {
         <li>
         <NavLink to="/frutos/">Frutos Secos</NavLink>
         </li>
+        <li>
+        <NavLink to="/sinTacc/">Sin TACC</NavLink>
+        </li>
 
         <li>
           {cart.length !== 0 && <span>{cart.length}</span>

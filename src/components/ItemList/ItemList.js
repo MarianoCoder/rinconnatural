@@ -2,6 +2,7 @@ import * as React from 'react';
 import Item from "../Item/Item";
 import { useParams } from "react-router";
 import { getFirestore } from '../../firebase';
+import "./ItemList.css"
 
 
 const ItemList = () =>{
@@ -37,7 +38,7 @@ const ItemList = () =>{
   
   return (
   <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
-      {cargando &&  <p>Cargando . . .</p>}
+      {cargando &&  <p className="loading">Cargando . . .</p>}
       {data.map((items)=>{
         return (
         

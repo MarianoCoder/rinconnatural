@@ -1,0 +1,12 @@
+.footer{
+    background-color: black;
+    color: white;
+    font-family: 'Josefin Sans';
+    font-size: 15px;   
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    
+
+}

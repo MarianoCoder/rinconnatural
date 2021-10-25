@@ -1,10 +1,11 @@
 .Card{
-    width: 230px;
-    height: 330px;
+    width: 220px;
+    height: 310px;
     border: 2px solid grey;
     box-sizing: border-box;
     border-radius: 0.5rem;
     padding: 0.5rem;
+    padding-top: 1rem;
     margin: 1rem;
     box-shadow:grey;
     font-family: 'Josefin Sans';
@@ -17,14 +18,16 @@
     font-family: 'Josefin Sans';
     font-size: 25px;
     
+    
 }
 .Card .Imgproducto {
     width: 80%;
-    height: 50%;
+    height: 55%;
     padding: 0;
     font-family:'Josefin Sans';
     font-size: 15px;
     margin: 0.5rem;
+    border-radius: 0.3rem;
 }
 .Description {
    

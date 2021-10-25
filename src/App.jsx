@@ -11,6 +11,8 @@ import Cart from "./pages/Cart";
 import Login from "./components/Login/login";
 import Frutos from "./pages/Frutos";
 import Reposteria from "./pages/Reposteria";
+import SinTacc from "./pages/SinTacc"
+import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/reposteria" component={Reposteria} />
         <Route exact path="/frutos" component={Frutos} />
+        <Route exact path="/sinTacc" component={SinTacc} />
         <Route exact path="/productos/:id" component={ProductDetail} />
         <Route exact path="/category/:category">
           {" "}
@@ -31,7 +34,7 @@ function App() {
         </Route>
         <Route path="*" component={NotFound} />
       </Switch>
-      <footer> Copyright 2021 Rincón Natural • All Rights Reserved</footer>
+      <Footer />
     </BrowserRouter>
   );
 }
