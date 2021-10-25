@@ -8,12 +8,9 @@ import NotFound from "./pages/NotFound";
 import ProductDetail from "./pages/ProductDetail";
 import ItemListContainer from "./containers/ItemListContainer";
 import Cart from "./pages/Cart";
-<<<<<<< HEAD
 import Login from "./components/Login/login";
-=======
-import Login from "./components/Login/login"
-
->>>>>>> f8340b1b83c4d283ad2e9ac10a8639d802dc3b8e
+import Frutos from "./pages/Frutos";
+import Reposteria from "./pages/Reposteria";
 
 function App() {
   return (
@@ -25,6 +22,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/counter" component={Counter} />
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/reposteria" component={Reposteria} />
+        <Route exact path="/frutos" component={Frutos} />
         <Route exact path="/productos/:id" component={ProductDetail} />
         <Route exact path="/category/:category">
           {" "}

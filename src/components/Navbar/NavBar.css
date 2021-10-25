@@ -1,20 +1,12 @@
 .navbar{
-<<<<<<< HEAD
     
-=======
-    width: 100%;
->>>>>>> f8340b1b83c4d283ad2e9ac10a8639d802dc3b8e
     height: 30px;
     background: black;
     color: whitesmoke;
     padding: 0.5rem 1rem;
     display: flex;
     align-items:center;
-<<<<<<< HEAD
     justify-content: right;
-=======
-    justify-content: space-between;
->>>>>>> f8340b1b83c4d283ad2e9ac10a8639d802dc3b8e
     font-family: 'Josefin Sans';
     font-size: 20px;
     margin-right: 0;
@@ -23,10 +15,7 @@
 .navbar ul{
     display: flex;
     padding-right: 1rem;
-<<<<<<< HEAD
     padding-right: 0;
-=======
->>>>>>> f8340b1b83c4d283ad2e9ac10a8639d802dc3b8e
 
 }
 
