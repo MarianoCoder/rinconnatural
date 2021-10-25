@@ -8,7 +8,12 @@ import NotFound from "./pages/NotFound";
 import ProductDetail from "./pages/ProductDetail";
 import ItemListContainer from "./containers/ItemListContainer";
 import Cart from "./pages/Cart";
+<<<<<<< HEAD
 import Login from "./components/Login/login";
+=======
+import Login from "./components/Login/login"
+
+>>>>>>> f8340b1b83c4d283ad2e9ac10a8639d802dc3b8e
 
 function App() {
   return (

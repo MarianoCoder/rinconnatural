@@ -40,6 +40,7 @@ const ItemDetail = () => {
   }, [id]);
 
   return (
+<<<<<<< HEAD
     <div className="cardDetail">
       <Item
         key={items.id}
@@ -58,6 +59,17 @@ const ItemDetail = () => {
         </Link>
       )}
     </div>
+=======
+  <div className="cardDetail">
+          
+    <Item key={items.id} title={items.title} description={items.description} coin={items.coin} price={items.price} image={items.image}/>
+    {
+    }
+      {!isBuy ? <ItemCount stock="6" initial="1" onAdd={addHandler} /> :
+      <Link to="/cart"><button>Terminar compra</button></Link>
+      }
+  </div>
+>>>>>>> f8340b1b83c4d283ad2e9ac10a8639d802dc3b8e
   );
 };
 
