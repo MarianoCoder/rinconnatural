@@ -1,11 +1,9 @@
 .IconoCarrito{
     display: flex;
-    width: 40px;
-    height: 40px;
-    align-items: right;
+    width: 30px;
+    height: 30px;
     cursor:pointer;
-    
-    
-
+   
+   
 
 }

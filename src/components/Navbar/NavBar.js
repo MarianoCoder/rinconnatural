@@ -17,10 +17,10 @@ function NavBar() {
         <NavLink to="/">Home</NavLink>
         </li>
         <li>
-        <NavLink to="/category/Reposteria/">Reposteria</NavLink>
+        <NavLink to="/reposteria/">Reposteria</NavLink>
         </li>
         <li>
-        <NavLink to="/category/Frutos/">Frutos Secos</NavLink>
+        <NavLink to="/frutos/">Frutos Secos</NavLink>
         </li>
 
         <li>
@@ -30,7 +30,7 @@ function NavBar() {
         </li>
       </ul>
       
-      <CartWidget src={carrito} alt="logo"/>
+      <NavLink to="/cart"><CartWidget src={carrito} alt="logo"/></NavLink>
       
       </nav>
     )

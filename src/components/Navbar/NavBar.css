@@ -1,20 +1,21 @@
 .navbar{
-    width: 100%;
+    
     height: 30px;
     background: black;
     color: whitesmoke;
     padding: 0.5rem 1rem;
     display: flex;
     align-items:center;
-    justify-content: space-between;
+    justify-content: right;
     font-family: 'Josefin Sans';
     font-size: 20px;
-    
+    margin-right: 0;
     
 }
 .navbar ul{
     display: flex;
     padding-right: 1rem;
+    padding-right: 0;
 
 }
 

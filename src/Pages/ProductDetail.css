@@ -1,0 +1,16 @@
+.notFound{
+    font-family: 'Josefin Sans';
+    font-weight: normal;
+    font-size: 20px;
+    margin: 6rem;
+}
+
+.btnNot{
+    justify-content: right;
+    color: white;
+    font-family:'Josefin Sans';
+    font-weight: normal;
+    height: 2rem;
+    margin-bottom: 7rem;
+
+}

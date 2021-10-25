@@ -2,7 +2,7 @@ import * as React from "react";
 import Item from "../components/Item/Item";
 import { getFirestore } from "../firebase";
 
-const Reposteria = () => {
+const Frutos = () => {
   const [data, setData] = React.useState([]);
   const [cargando, setCargando] = React.useState(false);
   const [error, setError] = React.useState(null);
@@ -12,7 +12,7 @@ const Reposteria = () => {
 
     const productsCollection = db
       .collection("products")
-      .where("categoryId", "==", 2);
+      .where("categoryId", "==", 3);
 
     setCargando(true);
     productsCollection
@@ -56,4 +56,4 @@ const Reposteria = () => {
   );
 };
 
-export default Reposteria;
+export default Frutos;

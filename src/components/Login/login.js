@@ -14,6 +14,7 @@ const firebaseApp = getFirebase();
 class Login extends Component {
     render (){
         const {user, signOut, signInWithGoogle} = this.props;
+        
         return (
             <div className="loginMain">
             <div>

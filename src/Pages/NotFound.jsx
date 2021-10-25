@@ -1,13 +1,16 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+import "./ProductDetail.css";
 
 const NotFound = () => {
-    return (
-        <div>
-           <h1>La página solicitada no existe</h1>
-           <button>Volver</button>
-           
-        </div>
-    )
-}
+  return (
+    <div className="notFound">
+      <h1>Oops! La página solicitada no existe...</h1>
+      <Link to="/">
+        <button className="btnNot">Volver</button>
+      </Link>
+    </div>
+  );
+};
 
 export default NotFound;

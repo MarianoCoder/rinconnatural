@@ -5,7 +5,7 @@ const CartWidget = (props) =>{
     return (
         <div className="IconoCarrito"> 
         
-        <img className="ImgCarrito"
+        <img 
             src={props.src}
             alt="imagen"/>
         
