@@ -12,10 +12,12 @@ const Cart = () => {
   const [remove, setRemove] = React.useState([]);
   const [items, setItems] = React.useState([]);
 
+  const total = cart.reduce((a, i) => a + i.price * i.quantity, 0);
+
   const newOrder = {
     user,
     cart,
-    total: 10000,
+    total,
     date: firebase.firestore.FieldValue.serverTimestamp(),
   };
 
@@ -72,7 +74,7 @@ const Cart = () => {
             </button>
           </div>
         ))}
-        <h2> Total: $ {cart.reduce((a, i) => a + i.price * i.quantity, 0)}</h2>
+        <h2> Total: $ {total}</h2>
         <button className="btnCart" onClick={handleCheckout}>
           Finalizar Compra
         </button>
@@ -87,37 +89,4 @@ const Cart = () => {
   }
 };
 
-<<<<<<< HEAD
 export default Cart;
-=======
-
-    if (cart.length === 0){
-        return(
-            <div className="emptyCart">Tu carrito está vacío... te esperamos en la Tienda!</div>
-        )
-    }else{
-        return (
-        <div>
-           <h2>Tu carrito</h2>
-           {
-               cart.map((items)=>(
-                
-                <div key={items.id} className="cartResume">
-                    <span>{items.title}</span>
-                    <span>{items.quantity}</span>
-                    <span>$ {items.price * items.quantity}</span>
-                    <button className="btnCart" onClick={()=>removeItem(items)}>Eliminar</button>
-                </div>
-           ))}
-           <h2> Total: $ {cart.reduce((a,i) => a + i.price * i.quantity, 0)}</h2>
-                <button className="btnCart" onClick={handleCheckout}>Finalizar Compra</button>
-                <button className="btnCart" onClick={handleUpdate}>Modificar Carrito</button>
-                <button className="btnCart" onClick={handleDelete}>Eliminar Orden </button>
-           
-           
-        </div>
-    )}
-}
-
-export default Cart;
->>>>>>> f8340b1b83c4d283ad2e9ac10a8639d802dc3b8e
