@@ -9,7 +9,6 @@ const ItemList = () =>{
     const [data, setData] = React.useState([]);
     const [cargando, setCargando] = React.useState(false)
     const [error, setError] = React.useState(null);
-    const {category} = useParams()
 
     React.useEffect(() => {
       const db = getFirestore();
@@ -37,7 +36,7 @@ const ItemList = () =>{
 
   
   return (
-  <div style={{display : "flex", justifyContent: "space-evently", flexWrap: "wrap"}}>
+  <div style={{display : "flex", justifyContent: "space-around", flexWrap: "wrap"}}>
       {cargando &&  <p className="loading">Cargando . . .</p>}
       {data.map((items)=>{
         return (

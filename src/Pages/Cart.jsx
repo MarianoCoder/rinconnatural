@@ -1,13 +1,13 @@
 import * as React from "react";
 import "./Cart.css";
 import { useCart } from "../context/CartContext";
-import { useUser } from "../context/UserContext";
+import { useLogin } from "../context/LoginContext";
 import { getFirestore } from "../firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 
 const Cart = () => {
-  const { user } = useUser();
+  const context = useLogin();
   const { cart, clear, removeItem } = useCart();
   const [remove, setRemove] = React.useState([]);
   const [items, setItems] = React.useState([]);
@@ -15,7 +15,7 @@ const Cart = () => {
   const total = cart.reduce((a, i) => a + i.price * i.quantity, 0);
 
   const newOrder = {
-    user,
+    
     cart,
     total,
     date: firebase.firestore.FieldValue.serverTimestamp(),
