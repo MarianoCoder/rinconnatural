@@ -3,9 +3,20 @@ import * as React from "react";
 
 
 const LoginContext = React.createContext([]);
+LoginContext.displayName = "LoginContext";
 
 export const LoginProvider = ({children}) => {
-    return <LoginContext.Provider value={"Este es el LoginContext"}>{children}</LoginContext.Provider>
+    const [login, setLogin] = React.useState([]);
+
+    const addUser = (user) =>{
+        const newUser = {user};
+
+        setLogin(newUser);
+    };
+
+        const value = {login, addUser}
+
+    return <LoginContext.Provider value={value}>{children}</LoginContext.Provider>
 };
 export const useLogin = () =>{
     const context = React.useContext(LoginContext);

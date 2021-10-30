@@ -6,8 +6,9 @@ import { getFirestore } from "../firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 
+
 const Cart = () => {
-  const context = useLogin();
+  const { addUser } = useLogin();
   const { cart, clear, removeItem } = useCart();
   const [remove, setRemove] = React.useState([]);
   const [items, setItems] = React.useState([]);
@@ -16,6 +17,7 @@ const Cart = () => {
 
   const newOrder = {
     
+    addUser,
     cart,
     total,
     date: firebase.firestore.FieldValue.serverTimestamp(),
@@ -50,9 +52,6 @@ const Cart = () => {
     clear(remove, items);
   };
 
-  //const clearCart=()=>{
-  //clear(remove, items);
-  // };
 
   if (cart.length === 0) {
     return (
