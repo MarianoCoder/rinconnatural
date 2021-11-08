@@ -22,7 +22,7 @@ export const useLogin = () =>{
     const context = React.useContext(LoginContext);
 
     if(!context) {
-        throw new Error ("uselogin debe usarse desde adentro de un LoginProvider")
+        throw new Error ("useLogin debe usarse desde adentro de un LoginProvider")
     }
     return context;
 };

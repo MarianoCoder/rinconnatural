@@ -18,7 +18,7 @@ const SinTacc = () => {
     productsCollection
       .get()
       .then((querySnapshot) => {
-        if (querySnapshot.empy) {
+        if (querySnapshot.empty) {
           console.log("No hay productos");
         } else {
           setData(

@@ -14,17 +14,16 @@ const firebaseApp = getFirebase();
 
 const Login =(props)=> {
     const [userLogin, setUserLogin] = React.useState([]);
+    const { addUser } = useLogin();
     
-    
-        const {addUser} = useLogin();
+
         const { user, signOut, signInWithGoogle} = props;
 
-        const signGoogle = () => {
-            addUser(userLogin)
+        const signGoogle = (user) => {
+            addUser(user)
         }
-
         
-    
+        
         return (
             <div className="loginMain">
             <div>
@@ -41,8 +40,8 @@ const Login =(props)=> {
                 }
                 {
                     user
-                    ? <button className="sesion" onChange={signGoogle} onClick={signOut}>Cerrar Sesión</button>
-                    : <button className="sesion" onClick={signInWithGoogle}>Loguearse con Google</button>
+                    ? <button className="sesion" onClick={signOut}>Cerrar Sesión</button>
+                    : <button className="sesion" onChange={signGoogle} onClick={signInWithGoogle}>Loguearse con Google</button>
                 }
             </div>
             </div>

@@ -53,9 +53,11 @@ const ItemDetail = () => {
       {!isBuy ? (
         <ItemCount stock="6" initial="1" onAdd={addHandler} />
       ) : (
+        <div>
         <Link to="/cart">
           <button>Terminar compra</button>
         </Link>
+        </div>
       )}
     </div>
   );

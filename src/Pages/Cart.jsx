@@ -8,16 +8,16 @@ import "firebase/compat/firestore";
 
 
 const Cart = () => {
-  const { addUser } = useLogin();
+  const { login } = useLogin();
   const { cart, clear, removeItem } = useCart();
   const [remove, setRemove] = React.useState([]);
   const [items, setItems] = React.useState([]);
 
   const total = cart.reduce((a, i) => a + i.price * i.quantity, 0);
+  console.log(login);
 
   const newOrder = {
-    
-    addUser,
+    login,
     cart,
     total,
     date: firebase.firestore.FieldValue.serverTimestamp(),
@@ -26,14 +26,24 @@ const Cart = () => {
   const handleCheckout = () => {
     const db = getFirestore();
     const ordersCollection = db.collection("orders");
+    const cartRef = ordersCollection.doc("docRef")
 
     ordersCollection
+      
       .add(newOrder)
       .then((docRef) =>
         console.log("Se creo el documento exitosamente", docRef.id)
       )
       .catch((error) => console.log(error));
-  };
+
+    //cartRef
+    //.get()
+    //.then((response) =>console.log(response))
+    //.catch();
+    
+
+    
+  }
 
   const handleUpdate = () => {
     const db = getFirestore();
