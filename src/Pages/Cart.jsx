@@ -5,17 +5,20 @@ import { useLogin } from "../context/LoginContext";
 import { getFirestore } from "../firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { user } = useLogin();
+  const { login } = useLogin();
   const { cart, clear, removeItem } = useCart();
   const [remove, setRemove] = React.useState([]);
   const [items, setItems] = React.useState([]);
+  const { id } = useParams();
 
   const total = cart.reduce((a, i) => a + i.price * i.quantity, 0);
 
   const newOrder = {
-    user,
+    login,
     cart,
     total,
     date: firebase.firestore.FieldValue.serverTimestamp(),
@@ -24,16 +27,26 @@ const Cart = () => {
   const handleCheckout = () => {
     const db = getFirestore();
     const ordersCollection = db.collection("orders");
+    
 
     ordersCollection
-
       .add(newOrder)
       .then((docRef) => {
-        ordersCollection.get();
-        console.log("Se creo el documento exitosamente", docRef.id);
+        console.log("Se creo el documento exitosamente", docRef.id)
+        const order = docRef.id;
+
+        ordersCollection.get(order)
+                        .then((docRef)=> {
+                        if (!docRef.exists) {
+                          console.log("No hay productos");
+                        } else {
+                          setItems({ id: docRef.id, ...docRef.data() });
+                        }
       })
-      .catch((error) => console.log(error));
-  };
+      .catch((error) => console.log(error))
+      .finally(() => {});
+  },[id]);
+}
 
   const handleUpdate = () => {
     const db = getFirestore();
@@ -73,9 +86,9 @@ const Cart = () => {
           </div>
         ))}
         <h2> Total: $ {total}</h2>
-        <button className="btnCart" onClick={handleCheckout}>
+        <Link to="/checkOut"> <button className="btnCart" onClick={handleCheckout}> 
           Finalizar Compra
-        </button>
+        </button></Link>
         <button className="btnCart" onClick={handleUpdate}>
           Modificar Carrito
         </button>

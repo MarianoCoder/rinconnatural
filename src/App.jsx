@@ -13,6 +13,7 @@ import Frutos from "./pages/Frutos";
 import Reposteria from "./pages/Reposteria";
 import SinTacc from "./pages/SinTacc"
 import Footer from "./components/Footer/Footer"
+import CheckOut from "./pages/Checkout";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/counter" component={Counter} />
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/checkOut" component={CheckOut} />
         <Route exact path="/reposteria" component={Reposteria} />
         <Route exact path="/frutos" component={Frutos} />
         <Route exact path="/sinTacc" component={SinTacc} />
