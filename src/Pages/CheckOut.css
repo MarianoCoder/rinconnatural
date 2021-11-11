@@ -1,0 +1,10 @@
+.cartResume{
+    font-weight:normal;
+    font-family:'Josefin Sans';
+    font-size: 30px;
+    height: 20rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
+}

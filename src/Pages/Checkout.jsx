@@ -2,45 +2,49 @@ import * as React from "react";
 import { getFirestore } from "../firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
+import { useParams } from "react-router";
+import "./CheckOut.css";
 
 
 
 const CheckOut = () => {
-    const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState([]);
+  const { id } = useParams();
+
+  React.useEffect(() => {
+    
 
     const db = getFirestore();
     const ordersCollection = db.collection("orders");
-
-    //ordersCollection
-      //.add(newOrder)
-      //.then((docRef) => {
-       // console.log("Se creo el documento exitosamente", docRef.id)
+    const order = ordersCollection.doc(id)
         
-        
-        ordersCollection.get()
-                        //.then((docRef)=> {})
-                        //if (!docRef.exists) {
-                        //console.log("No hay productos");
-                       //} else {
-                      //setData({ id: docRef.id, ...docRef.data() });
-                        //}
-     // })
+        order
+             .get()
+             .then((doc) => {
+            if (!doc.exists) {
+              console.log("El producto no existe");
+        } else {
+          setData({ id: doc.id, ...doc.data() });
+        }
+      })
       .catch((error) => console.log(error))
       .finally(() => {});
+  }, [id]);
+
   
-
-
-
-
-
 
     return (
       <div>
-          <span>Gracias por su compra!!</span>
+          <span className="cartResume">Gracias por su compra!!</span>
 
-          <span>Nombre:</span>
-          <span>Total $</span>
-        
+          {data.map((items) => (
+          <div key={items.id} className="cartResume">
+            <span>{items.title}</span>
+            <span>{items.quantity}</span> 
+            </div>
+            ))}
+
+  
         
       </div>
     );
