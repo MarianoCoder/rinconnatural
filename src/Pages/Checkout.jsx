@@ -8,6 +8,7 @@ import "./CheckOut.css";
 
 
 const CheckOut = () => {
+
   const [data, setData] = React.useState([]);
   const { id } = useParams();
 
@@ -35,7 +36,7 @@ const CheckOut = () => {
 
     return (
       <div>
-          <span className="cartResume">Gracias por su compra!!</span>
+          <span className="orderResume">Gracias por su compra!!</span>
 
           {data.map((items) => (
           <div key={items.id} className="cartResume">
