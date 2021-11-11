@@ -25,7 +25,7 @@ const ItemDetail = () => {
     const productsCollection = db.collection("products");
 
     const items = productsCollection.doc(id);
-    console.log(items)
+   
 
     items
       .get()

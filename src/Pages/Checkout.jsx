@@ -35,8 +35,8 @@ const CheckOut = () => {
   
 
     return (
-      <div>
-          <span className="orderResume">Gracias por su compra!!</span>
+      <div className="orderResume">
+          <span>Gracias por su compra!!</span>
 
           {data.map((items) => (
           <div key={items.id} className="cartResume">
