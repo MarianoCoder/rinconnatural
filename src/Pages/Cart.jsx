@@ -5,15 +5,17 @@ import { useLogin } from "../context/LoginContext";
 import { getFirestore } from "../firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-import { useParams } from "react-router";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
+import { Link, useParams } from "react-router-dom";
 
 const Cart = () => {
   const { login } = useLogin();
   const { cart, clear, removeItem } = useCart();
   const [remove, setRemove] = React.useState([]);
   const [items, setItems] = React.useState([]);
+  const History = useHistory();
   const { id } = useParams();
+  
 
   const total = cart.reduce((a, i) => a + i.price * i.quantity, 0);
 
@@ -27,11 +29,15 @@ const Cart = () => {
   const handleCheckout = () => {
     const db = getFirestore();
     const ordersCollection = db.collection("orders");
+   
     
 
     ordersCollection
       .add(newOrder)
       .then((docRef) => {
+        console.log("Se creo el documento exitosamente", docRef.id)})
+        
+      /*.then((docRef) => {
         console.log("Se creo el documento exitosamente", docRef.id)
         const order = docRef.id;
 
@@ -42,10 +48,14 @@ const Cart = () => {
                         } else {
                           setItems({ id: docRef.id, ...docRef.data() });
                         }
-      })
+      })*/
       .catch((error) => console.log(error))
       .finally(() => {});
-  },[id]);
+
+      History.push(`/orderDetail/${id}`);
+
+      
+  
 }
 
   const handleUpdate = () => {
@@ -85,8 +95,9 @@ const Cart = () => {
             </button>
           </div>
         ))}
+
         <h2> Total: $ {total}</h2>
-        <Link to="/checkOut"> <button className="btnCart" onClick={handleCheckout}> 
+        <Link to={`/orderDetail/${id}`}><button className="btnCart" onClick={handleCheckout}> 
           Finalizar Compra
         </button></Link>
         <button className="btnCart" onClick={handleUpdate}>
