@@ -3,7 +3,8 @@ import "firebase/compat/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCqP9rSrwkGwVTt_FdsGC29eBf5QiqD_60",
-  authDomain: "rincon-natural.firebaseapp.com",
+  authDomain: "rinconnatural.vercel.app",
+  //authDomain: "rincon-natural.firebaseapp.com",
   projectId: "rincon-natural",
   storageBucket: "rincon-natural.appspot.com",
   messagingSenderId: "282812683093",
