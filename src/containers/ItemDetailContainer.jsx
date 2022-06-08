@@ -4,7 +4,7 @@ import ItemDetail from "../components/ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   return (
-    <div
+    <div class="product"
       style={{
         display: "flex",
         justifyContent: "space-evently",

@@ -1,34 +1,32 @@
-.loginBox{
+.loginBox {
     font-family: 'Josefin Sans';
-    font-size: 20px;   
+    font-size: 20px;
     display: inline;
     margin-right: 5rem;
-    
-   
+
+
 }
 
-.logo{
+.logo {
     margin-left: 1.5rem;
 }
 
-
-
-.saludo{
+.saludo {
     justify-content: right;
     margin: 1rem;
-    
+
 }
 
-.loginMain{
+.loginMain {
     display: flex;
     justify-content: space-between;
 }
 
-.sesion{
-    
+.sesion {
+
     justify-content: right;
     color: white;
-    font-family:'Josefin Sans';
+    font-family: 'Josefin Sans';
     font-weight: normal;
     height: 1.6rem;
     margin: 0;
@@ -36,5 +34,25 @@
 
 }
 
+@media only screen and (max-width: 768px) {
 
+    .logo {
+        height: 75px;
+        width: 270px;
+        margin: 0.8rem;
+        margin-top:1.5rem;
+        
+    }
 
+    .loginBox {
+
+        font-size: 18px;
+        margin-right: 0.5rem;
+    }
+
+    .loginMain {
+        display: inline;
+        justify-content: space-between;
+    }
+
+}
