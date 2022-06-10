@@ -10,6 +10,13 @@ a{
     text-align: center;
     align-items: center;
     padding-left:40%;
+    
+}
+
+.btnFinish{
+   
+    margin-bottom:20px;
+    
 }
 
 @media only screen and (max-width: 768px) {

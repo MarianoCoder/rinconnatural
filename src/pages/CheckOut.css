@@ -5,6 +5,9 @@
     height: 20.1rem;
     text-align: center;
     align-items: center;
+    margin-top: 4rem;
+    justify-content: center;
+    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
