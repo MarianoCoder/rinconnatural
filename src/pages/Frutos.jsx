@@ -1,6 +1,7 @@
 import * as React from "react";
 import Item from "../components/Item/Item";
 import { getFirestore } from "../firebase";
+import "./Frutos.css";
 
 const Frutos = () => {
   const [data, setData] = React.useState([]);
@@ -31,14 +32,8 @@ const Frutos = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-evently",
-        flexWrap: "wrap",
-      }}
-    >
-      {cargando && <p>Cargando . . .</p>}
+    <div className="frutos">
+      {cargando && <p className="frutosLoad">Cargando . . .</p>}
       {data.map((items) => {
         return (
           <Item

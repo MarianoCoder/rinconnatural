@@ -1,0 +1,23 @@
+.frutos{
+
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+}
+
+.frutosLoad{
+        margin-bottom: 300px;
+    }
+
+@media only screen and (max-width: 768px) {
+
+    .frutos{
+        justify-content: center;
+    }
+
+    .frutosLoad{
+        margin-bottom: 500px;
+    }
+
+
+}

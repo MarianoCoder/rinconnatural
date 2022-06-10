@@ -1,0 +1,21 @@
+.reposteria{
+
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+}
+
+.reposteriaLoad{
+    margin-bottom: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .reposteria{
+        justify-content: center;
+    }
+
+    .reposteriaLoad{
+        margin-bottom: 500px;
+    }
+}

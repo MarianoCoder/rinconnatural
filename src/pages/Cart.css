@@ -4,9 +4,9 @@ body{
 }
 
 .emptyCart{
-    margin: 10rem;
+    margin: 5rem;
     font-size: 30px;
-    height: 4rem;
+    height: 10.1rem;
 }
 
 .btnCart{
@@ -30,7 +30,18 @@ body{
     align-items:center;
     text-align: center;
     justify-content:center;
-    
-    
-    
+}
+
+@media only screen and (max-width: 768px) {
+
+    .emptyCart{
+        display:flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-right: 6.1rem;
+        margin-left: 6.1rem;
+        font-size: 22px;
+        height: 8.7rem;
+
+    }
 }
