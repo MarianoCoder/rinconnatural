@@ -14,3 +14,17 @@
     margin-bottom: 7rem;
 
 }
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .notFound{
+        
+        font-size: 16px;
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+
+}

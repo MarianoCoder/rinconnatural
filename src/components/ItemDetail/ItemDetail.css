@@ -4,10 +4,31 @@ a{
 }
 
 .cardDetail{
-    display: block;
-    margin-left: 34rem;
+    justify-content: center;
+    font-family:'Josefin Sans';
+    display:inline;
     text-align: center;
     align-items: center;
-    justify-content: space-between;
-    
+    padding-left:40%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .cardDetail{
+        display: flex;
+        flex-wrap:wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .btnFinish{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 9px;
+        margin-bottom:10px;
+        
+    }
 }

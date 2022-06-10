@@ -56,7 +56,7 @@ const ItemDetail = () => {
       ) : (
         <div>
         <Link to="/cart">
-          <button>Terminar compra</button>
+          <button className="btnFinish">Terminar compra</button>
         </Link>
         </div>
       )}
