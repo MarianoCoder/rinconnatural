@@ -6,3 +6,17 @@
     text-align: center;
     align-items: center;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .orderResume{
+        font-weight:normal;
+        font-family:'Josefin Sans';
+        font-size: 26px;
+        text-align: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom:4rem;
+    }
+
+}
