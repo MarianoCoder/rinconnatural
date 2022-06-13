@@ -1,21 +1,25 @@
-.sintacc{
+.sintacc {
 
     display: flex;
-    justify-content:space-evenly;
-    flex-wrap:wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.sinTaccLoad{
+.sinTaccLoad {
     margin-bottom: 190px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans';
+    font-size: 24px;
 }
 
 @media only screen and (max-width: 768px) {
 
-    .sintacc{
+    .sintacc {
         justify-content: center;
     }
 
-    .sinTaccLoad{
+    .sinTaccLoad {
         margin-bottom: 500px;
     }
 }

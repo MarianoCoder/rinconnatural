@@ -1,21 +1,25 @@
-.reposteria{
+.reposteria {
 
     display: flex;
-    justify-content:space-evenly;
-    flex-wrap:wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.reposteriaLoad{
+.reposteriaLoad {
     margin-bottom: 300px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans';
+    font-size: 24px;
 }
 
 @media only screen and (max-width: 768px) {
 
-    .reposteria{
+    .reposteria {
         justify-content: center;
     }
 
-    .reposteriaLoad{
+    .reposteriaLoad {
         margin-bottom: 500px;
     }
 }

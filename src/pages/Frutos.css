@@ -1,21 +1,25 @@
-.frutos{
+.frutos {
 
     display: flex;
-    justify-content:space-evenly;
-    flex-wrap:wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.frutosLoad{
-        margin-bottom: 300px;
-    }
+.frutosLoad {
+    margin-bottom: 300px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans';
+    font-size: 24px;
+}
 
 @media only screen and (max-width: 768px) {
 
-    .frutos{
+    .frutos {
         justify-content: center;
     }
 
-    .frutosLoad{
+    .frutosLoad {
         margin-bottom: 500px;
     }
 

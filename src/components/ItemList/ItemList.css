@@ -1,6 +1,9 @@
 .loading{
     height: 50vh;
     justify-content: center;
+    align-items: center;
+    font-family:'Josefin Sans';
+    font-size: 24px;
 }
 
 
