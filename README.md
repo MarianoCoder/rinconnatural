@@ -1,3 +1,7 @@
+# Proyect Info
+
+This is a project carried out as an internship corresponding to the Coder House ReactJS course. The goal is to create a shopping cart made up of several functional components.
+
 # Información del proyecto
 
 Este es un proyecto realizado en concepto de práctica correspondiente al curso de ReactJS de Coder House.
